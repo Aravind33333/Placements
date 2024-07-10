@@ -12,4 +12,28 @@ int main()
   }
   
  }
-_____________________________________________________________________________
+__________________________________________________________________________________________________________________________________________________________________________________________
+2.Write a  program to count the number of 0s and 1s in an array that is in random order. You may assume that the array consists of only 0s and 1s.
+int main()
+{
+  int n;
+  scanf("%d",&n);
+  int arr[n];
+  int count0=0;
+  int count1=0;
+  for(int i=0;i<n;i++){
+      scanf("%d",&arr[i]);
+  }
+  for(int j=0;j<n;j++){
+      if(arr[j]==0){
+          count0++;
+      }
+      if(arr[j]==1){
+          count1++;
+      }
+  }
+  printf("0=%d 1=%d",count0,count1);
+  
+ }
+__________________________________________________________________________________________________________________________________________________________________________________________
+3. Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.

@@ -68,4 +68,49 @@ int main()
 }
 __________________________________________________________________________________
 5.Armstrong:
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+  int n;
+  scanf("%d",&n);
+  int cmp=n;
+  int temp=n;
+  int count=0;
+  int total=0;
+  while(temp>0){
+      temp/=10;
+      count++;
+  }
+  while(cmp>0){
+      int rev=cmp%10;
+      total+=pow(rev,count);
+      cmp/=10;
+  }
+  if(n==total){
+      printf("True");
+  }
+ }
+__________________________________________________________________________________
+6.Palindrome:
+int main()
+{
+  int n;
+  scanf("%d",&n);
+  int cmp=n;
+  int rev=0;
+  while(n>0){
+      int temp=n%10;
+      rev=rev*10+temp;
+      n=n/10;
+  }
+  if(rev==cmp){
+        printf("Palindrome");
+  }
+  else{
+      printf("Not a Palindrome");
+  }
+ }
+__________________________________________________________________________________
+
 

@@ -223,3 +223,54 @@ int main()
         printf("%d ",arr[i]);
     }
 }
+__________________________________________________________________________________________________________________________________________________________________________________________
+11.Write a program  to swap every pair of  adjacent array elements:
+int main()
+{
+     int n;
+     int value;
+    scanf("%d",&n);
+    int  arr[n+1];
+        for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n/2;i+=2){
+        int temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+    }
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+}
+__________________________________________________________________________________________________________________________________________________________________________________________
+12.Write a program  to left rotate for given times of an array elements:
+int main()
+{
+     int n;
+     int value;
+    scanf("%d",&n);
+    int  arr[n+1];
+        for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&value);
+    while(value>0){
+    for(int i=0;i<n-1;i++){
+        int temp=arr[i];
+        arr[i]=arr[i+1];
+        arr[i+1]=temp;
+    }
+     value--;    
+    }
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+}
+__________________________________________________________________________________________________________________________________________________________________________________________
+13.Given an array X with n number of elements, return true if the given array X is sorted else return false. You may consider multiple positions may be shifted in the array X. 
+Example 1: Input: X=[1,2,3,4,5] Output: true 
+Example 2: Input: X=[3,4,5, 1,2,] Output: true
+ Example 3: Input: X=[3,1,2,4,5] Output: false
+__________________________________________________________________________________________________________________________________________________________________________________________
+14.Write a program  to remove the duplicates in an array .

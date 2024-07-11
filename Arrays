@@ -183,6 +183,26 @@ int main()
 }
 __________________________________________________________________________________________________________________________________________________________________________________________
 9.Write a program  to insert the value at given position in the array.
+
+int main()
+{
+     int n;
+     int pos,value;
+    scanf("%d",&n);
+    int  arr[n+1];
+        for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    scanf("%d",&pos);
+    scanf("%d",&value);
+    for(int i=n+1;i>=pos;i--){
+        arr[i]=arr[i-1];
+    }
+    arr[pos-1]=value;
+    for(int i=0;i<n+1;i++){
+        printf("%d ",arr[i]);
+    }
+}
 __________________________________________________________________________________________________________________________________________________________________________________________
 10.Write a program  to delete the value at given position from the array.
 int main()

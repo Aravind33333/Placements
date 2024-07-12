@@ -272,6 +272,49 @@ ________________________________________________________________________________
 Example 1: Input: X=[1,2,3,4,5] Output: true 
 Example 2: Input: X=[3,4,5, 1,2,] Output: true
  Example 3: Input: X=[3,1,2,4,5] Output: false
+
+import java.util.Scanner;
+
+public class sortInMultiDimension {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int size=sc.nextInt();
+        sortInMultiDimension sp= new sortInMultiDimension();
+        int array[]=new int[size];
+        for(int i=0;i<size;i++){
+            array[i]=sc.nextInt();
+        }
+
+        int minpos=sp.MinPostion(array);
+        sp.check(minpos, array);
+    }
+    public int MinPostion(int[] array){
+        int position=0;
+        for(int i=1;i<array.length;i++){
+            if(array[position]>array[i])
+              position=i;
+        }
+        System.out.println(position);
+        return position;
+    }
+    public void check(int pos,int[] array){
+        int flag=0;
+        int len=array.length;
+        int i=0;
+        while(i<len-1){
+            if(array[pos%len]<array[(pos+1)%len]){
+                flag++;
+            }
+            pos++;
+            i++;
+        }
+        if(flag==len-1)
+            System.out.println("True");  
+        else
+        System.out.println("False");  
+    }
+}
+
 __________________________________________________________________________________________________________________________________________________________________________________________
 14.Write a program  to remove the duplicates in an array .
 

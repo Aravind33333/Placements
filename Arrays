@@ -324,3 +324,32 @@ int main()
     }}
         printf("%d %d",arr[1],arr[n-2]);
 }
+__________________________________________________________________________________________________________________________________________________________________________________________
+16.Find the leader of the element compared to the right side:
+public class leaderElement {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int condition=0;
+        int arr[]= new int[n];
+        for(int i=0;i<n;i++){
+            arr[i]= sc.nextInt();
+        }
+        for(int i=0;i<n;i++){
+            int max=arr[i];
+            for(int j=i;j<n;j++){         
+            if(max>=arr[j])
+                condition= 1;
+            else{   
+                condition=0;
+                break;
+            }
+        }
+            if(condition==1){
+                System.out.print(max+" ");
+            }
+            
+        }
+    }
+}
+__________________________________________________________________________________________________________________________________________________________________________________________

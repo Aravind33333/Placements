@@ -143,3 +143,32 @@ public class lettersInaString {
     }
 }
 ________________________________________________________________________________________________________________________________________
+14.Write a program in C to find the first occurrence of character.
+import java.util.Scanner;
+
+public class firstOccurence {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str=sc.next();
+        char ch =sc.next().charAt(0);
+        int index=str.indexOf(ch);
+        System.out.println(index);
+        
+    }
+    
+}
+________________________________________________________________________________________________________________________________________
+15.Write a program in C to find the last occurrence of character.
+import java.util.Scanner;
+
+public class firstOccurence {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str=sc.next();
+        char ch =sc.next().charAt(0);
+        int index=str.lastIndexOf(ch);
+        System.out.println(index);
+        
+    }
+    
+}

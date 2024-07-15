@@ -1,0 +1,145 @@
+1.Write a program in C to input a string and print it.
+package strings;
+import java.util.Scanner;
+public class gettingInput {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str=sc.next(); 
+        StringBuilder string=new StringBuilder(str);
+        System.out.println(string);
+        sc.close();
+    }
+}
+________________________________________________________________________________________________________________________________________
+2.Write a program in C to find the length of a string without using library functions.
+import java.util.Scanner;
+
+public class length {
+   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String str= sc.next();
+    char chsrarr[]=str.toCharArray();
+    int len=0;
+    for(char i:chsrarr){
+        len++;
+    }
+    System.out.print(len);
+    sc.close();
+   }
+}
+________________________________________________________________________________________________________________________________________
+3.Write a program in C to count the total number of alphabets, digits and special characters in a string.
+import java.util.Scanner;
+
+public class identifingEleinStrings {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str=sc.next();
+        searching(str);
+        sc.close();
+    }
+    public static void searching(String str) {
+        int alphac=0,numc=0,spec=0;
+       String lowcase=str.toLowerCase();
+       for(int i=0;i<str.length();i++){
+            if(lowcase.charAt(i)>='a'&& lowcase.charAt(i)<='z'){
+                alphac++;
+            }
+            else if(lowcase.charAt(i)>='0' && lowcase.charAt(i)<='9'){
+                numc++;
+            }
+            else{
+                spec++;
+            }
+
+       }
+       System.out.println(alphac+"Alphabets\n"+numc+"Numbers\n"+spec+"Specials");
+        }
+}
+________________________________________________________________________________________________________________________________________
+4.Write a program in C to count the total number of vowels or consonants in a string.
+import java.util.Scanner;
+
+public class vowelsAndConstants {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str=sc.next();
+        checking(str);
+        sc.close();
+    }
+    public static void checking(String str){
+        String lowercase=str.toLowerCase();
+        int vowels=0,constants=0;
+        for(int i=0;i<lowercase.length();i++){
+                        if(lowercase.charAt(i)=='a'||lowercase.charAt(i)=='e'||lowercase.charAt(i)=='i'||lowercase.charAt(i)=='o'||lowercase.charAt(i)=='u')
+            vowels++;
+else
+        constants++;
+
+        }
+        System.out.println(vowels+" Vowwels\n"+constants+" Constants");
+
+    }
+}
+________________________________________________________________________________________________________________________________________
+5.Write a program in C to convert string to uppercase
+import java.util.Scanner;
+public class upperCaseToLower {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str =sc.next();
+        lowering(str);
+        sc.close();
+    }
+    public static void lowering(String str){
+        int n=str.length();
+        for(int i=0;i<n;i++){
+            char ch=str.charAt(i);
+            if(str.charAt(i)>='A'&& str.charAt(i)<='Z'){
+            ch=(char)(ch+32);    
+        }
+            System.out.print(ch+" ");
+        }
+    }
+}
+
+________________________________________________________________________________________________________________________________________
+6.Write a program in C to convert string to lowercase
+import java.util.Scanner;
+
+
+public class lowerCaseToUpper {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        String str =sc.next();
+        lowering(str);
+        sc.close();
+    }
+    public static void lowering(String str){
+        int n=str.length();
+        for(int i=0;i<n;i++){
+            char ch=str.charAt(i);
+            if(str.charAt(i)>='a'&& str.charAt(i)<='z'){
+            ch=(char)(ch-32);    
+        }
+            System.out.print(ch+" ");
+        }
+    }
+}
+________________________________________________________________________________________________________________________________________
+Write a program in C to count the total number of words in a Sentence.
+public class lettersInaString {
+    public static void main(String[] args) {
+        String str="hello my name is aravind";
+        String arr[]=str.split("\\s");
+        int len=0;
+        for(String s:arr){
+            char ch[]=s.toCharArray();
+            for(char l:ch){
+                len++;
+            }
+        }
+        System.out.println(len);
+    }
+}
+________________________________________________________________________________________________________________________________________
